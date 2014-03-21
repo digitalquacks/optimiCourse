@@ -40,15 +40,15 @@ namespace Knapsack
         int items = Int32.Parse(firstLine[0]);
         int capacity = Int32.Parse(firstLine[1]);
 
-        int[] values = new int[items];
-        int[] weights = new int[items];
+        int[] values = new int[items + 1];
+        int[] weights = new int[items + 1];
 
         for(int i=1; i < items+1; i++){
           String line = lines[i];
           String[] parts = line.Split(' ');
 
-          values[i-1] = Int32.Parse(parts[0]);
-          weights[i-1] = Int32.Parse(parts[1]);
+          values[i] = Int32.Parse(parts[0]);
+          weights[i] = Int32.Parse(parts[1]);
         }
 
 

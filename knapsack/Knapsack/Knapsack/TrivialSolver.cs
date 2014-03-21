@@ -16,17 +16,17 @@ namespace Knapsack
             int weight = 0;
             int[] taken = new int[inputdata.items];
 
-            for (int i = 0; i < inputdata.items; i++)
+            for (int i = 1; i < inputdata.items; i++)
             {
                 if (weight + inputdata.weights[i] <= inputdata.capacity)
                 {
-                    taken[i] = 1;
+                    taken[i -1] = 1;
                     value += inputdata.values[i];
                     weight += inputdata.weights[i];
                 }
                 else
                 {
-                    taken[i] = 0;
+                    taken[i -1] = 0;
                 }
             }
 
