@@ -3,40 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Knapsack
+namespace Coloring
 {
     class Solution
     {
-        public int[] taken;
-        public double value;
-       
-        public Solution(int[] taken, int value)
-        {
-            this.taken = taken;
-            this.value = value;
-        }
+        public int num_colors  = 0;
+        public int[] assigned;
 
-        public Solution(int[,] dictionary, DataSet inputdata)
+        public Solution(int[] assigned, int num_colors)
         {
             // TODO: Complete member initialization
-
-            taken = new int[inputdata.items];
-            value = 0;
-            int consider = inputdata.capacity;
-
-            for (int i = inputdata.items; i > 0; i--)
-            {
-                if (dictionary[consider, i] != dictionary[consider, i -1])
-                {
-                    taken[i -1] = 1;
-                    consider -= inputdata.weights[i];
-                }
-                else
-                    taken[i -1] = 0;
-            }
-
-            value = dictionary[inputdata.capacity, inputdata.items];
-        
+            this.assigned = assigned;
+            this.num_colors = num_colors;
         }
 
     }

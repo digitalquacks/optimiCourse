@@ -5,7 +5,7 @@ using System.Text;
 using System.Collections;
 using System.IO;
 
-namespace Knapsack
+namespace Coloring
 {
     class ParseInput
     {
@@ -37,22 +37,21 @@ namespace Knapsack
              
         // parse the data in the file
         string[] firstLine = lines[0].Split(' ');
-        int items = Int32.Parse(firstLine[0]);
-        int capacity = Int32.Parse(firstLine[1]);
+        int node_count = Int32.Parse(firstLine[0]);
+        int edge_count = Int32.Parse(firstLine[1]);
 
-        int[] values = new int[items + 1];
-        int[] weights = new int[items + 1];
-
-        for(int i=1; i < items+1; i++){
+        int[,] edges = new int[edge_count,2];
+        
+        for(int i=0; i < edge_count; i++){
           String line = lines[i];
           String[] parts = line.Split(' ');
 
-          values[i] = Int32.Parse(parts[0]);
-          weights[i] = Int32.Parse(parts[1]);
+          edges[i,0] = Int32.Parse(parts[0]);
+          edges[i,1] = Int32.Parse(parts[1]);
+        
         }
 
-
-        return new DataSet(weights, values, items, capacity); 
+        return new DataSet(edges, node_count, edge_count); 
     }
         
     }

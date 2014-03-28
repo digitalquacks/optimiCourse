@@ -3,16 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coloring", "Coloring\Coloring.csproj", "{F4897E01-4C77-4CC1-BA55-A64CDBCE3E36}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7688EDFA-71DD-40C6-ABDE-BEFF265FB2B8}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\OptimizationCourse\DataSet.cs = ..\..\OptimizationCourse\DataSet.cs
-		..\..\OptimizationCourse\DyProg.cs = ..\..\OptimizationCourse\DyProg.cs
-		..\..\OptimizationCourse\ParseInput.cs = ..\..\OptimizationCourse\ParseInput.cs
-		..\..\OptimizationCourse\Program.cs = ..\..\OptimizationCourse\Program.cs
-		..\..\OptimizationCourse\Solution.cs = ..\..\OptimizationCourse\Solution.cs
-		..\..\OptimizationCourse\TrivialSolver.cs = ..\..\OptimizationCourse\TrivialSolver.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86

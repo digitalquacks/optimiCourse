@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Knapsack
+namespace Coloring
 {
     class DataSet
     {
-        public int[] weights, values;
-        public int items, capacity;
+        private int[,] edges;
+        public int node_count;
+        private int edge_count;
 
-
-        public DataSet(int[] weights, int[] values, int items, int capacity)
+        public DataSet(int[,] edges, int node_count, int edge_count)
         {
-            this.weights = weights;
-            this.values = values;
-            this.items = items;
-            this.capacity = capacity;
+            // TODO: Complete member initialization
+            this.edges = edges;
+            this.node_count = node_count;
+            this.edge_count = edge_count;
         }
+        
 
     }
 }
