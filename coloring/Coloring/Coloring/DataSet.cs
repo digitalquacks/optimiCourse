@@ -7,11 +7,20 @@ namespace Coloring
 {
     class DataSet
     {
-        private int[,] edges;
+        public int[,] edges_list;
         public int node_count;
-        private int edge_count;
-
+        public int edge_count;
+        public Dictionary<int, int[]> edges;
+        
         public DataSet(int[,] edges, int node_count, int edge_count)
+        {
+            // TODO: Complete member initialization
+            this.edges_list = edges;
+            this.node_count = node_count;
+            this.edge_count = edge_count;
+        }
+
+        public DataSet(Dictionary<int, int[]> edges, int node_count, int edge_count)
         {
             // TODO: Complete member initialization
             this.edges = edges;

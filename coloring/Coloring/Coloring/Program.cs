@@ -10,16 +10,21 @@ namespace Coloring
         static void Main(string[] args)
         {
           if (args.Length == 0)
-              args = new string[] { "-file=/data/gc_4_1" };
+           //  args = new string[] { "-file=/data/gc_4_1" };
+            args = new string[] { "-file=/data/gc_1000_5" };
 
 
             DataSet inputData = ParseInput.ParseIt(args);
 
-            // DyProg dp = new DyProg(inputData);
-            // DisplayOutput(dp.Solveit(inputData), inputData);
+            TrivialSolver ts = new TrivialSolver();
+            LocalSearch dp = new LocalSearch(inputData, ts.Solveit_Greedy(inputData));
+            DisplayOutput(dp.Solveit(), inputData);
 
-             TrivialSolver ts = new TrivialSolver();
-             DisplayOutput(ts.Solveit(inputData), inputData);
+             //TrivialSolver ts = new TrivialSolver();
+             //DisplayOutput(ts.Solveit(inputData), inputData);
+
+            //TrivialSolver ts = new TrivialSolver();
+            //DisplayOutput(ts.Solveit_Greedy(inputData), inputData);
 
         }
 
